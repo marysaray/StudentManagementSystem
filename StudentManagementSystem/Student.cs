@@ -17,6 +17,11 @@ namespace StudentManagementSystem
         // public string endOfStudentEmail = "@student.cptc.edu";
         #endregion
         #region Constructors
+        // no arg constructor
+        public Student()
+        {
+            StudentId = StudentId;
+        }
         public Student(string studentId)
         {
             StudentId = studentId;
