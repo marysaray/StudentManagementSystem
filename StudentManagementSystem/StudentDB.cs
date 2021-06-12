@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient; // DB
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,14 @@ namespace StudentManagementSystem
         /// <returns></returns>
         public static List<Student> GetAllStudents()
         {
-            throw new NotImplementedException();   
+            // create connection
+            SqlConnection con = 
+                    new SqlConnection("Data Source =localhost;InitialCatalog=SMS;IntegratedSecurity=True;");
+            // communicate with DB.
+            con.Open();
+            // close connection.
+            con.Close();
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Add
@@ -32,7 +40,10 @@ namespace StudentManagementSystem
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Delete
+        /// </summary>
+        /// <param name="s"></param>
         public static void Delete(Student s)
         {
             throw new NotImplementedException();
