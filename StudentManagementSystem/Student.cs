@@ -11,8 +11,24 @@ namespace StudentManagementSystem
     /// </summary>
     class Student
     {
+        #region Fields
+        // this is data is available for every object instance.
+        // commented out because it is unused.
+        // public string endOfStudentEmail = "@student.cptc.edu";
+        #endregion
+        #region Constructors
+        public Student(string studentId)
+        {
+            StudentId = studentId;
+        }
+        public Student(string studentId, string fullName)
+        {
+            StudentId = studentId;
+            FullName = fullName;
+        }
+        #endregion
         #region Properties
-        
+
         // Id, Name, Date of birth, email
         // Properties
         /// <summary>
