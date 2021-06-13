@@ -64,8 +64,12 @@ namespace StudentManagementSystem
 
         private void cmdAddStudent_Click(object sender, EventArgs e)
         {
-            // TODO: Create a form to add a student to the database
+            // Create a form to add a student to the database
+            frmAddStudent addForm = new frmAddStudent();
+            addForm.ShowDialog();
             // After student is added place them into the list box
+            List<Student> allStudents = StudentDB.GetAllStudents();
+            PopulateStudentList(allStudents);
         }
 
         private void cmdUpdateStudent_Click(object sender, EventArgs e)
