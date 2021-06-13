@@ -15,9 +15,8 @@ namespace StudentManagementSystem
         /// <returns></returns>
         public static List<Student> GetAllStudents()
         {
-            // create connection
-            SqlConnection con = 
-                    new SqlConnection("Data Source =localhost;Initial Catalog=SMS;Integrated Security=True;");
+            // create connection with DBHelper method
+            SqlConnection con = DBHelper.GetConnection();
 
             // create new instance of class SqlCommand
             SqlCommand cmd = new SqlCommand();
@@ -70,7 +69,34 @@ namespace StudentManagementSystem
         /// <param name="s"></param>
         public static void Add(Student s)
         {
-            throw new NotImplementedException();
+            // create connection with DBHelper method
+            SqlConnection con = DBHelper.GetConnection();
+
+            // Set up command object (query)
+            SqlCommand cmdInsert = new SqlCommand();
+
+            // Statement @parameters for security against SQl Injections.
+            cmdInsert.CommandText =
+                "INSERT INTO Students(Id, FullName, Email, DOB) " +
+                "VALUES(@StudentID, @FullName, @Email, @BirthDate)";  // placeholders
+
+            // Substitute parameters for actual values.
+            cmdInsert.Parameters.AddWithValue("@StudentID", s.StudentId);
+            cmdInsert.Parameters.AddWithValue("@FullName", s.FullName);
+            cmdInsert.Parameters.AddWithValue("@Email", s.Email);
+            cmdInsert.Parameters.AddWithValue("@BirthDate", s.DateOfBirth);
+
+            // Connect to database
+            cmdInsert.Connection = con;
+
+            // Open connection
+            con.Open();
+
+            // ExecuteNonQuery for Insert, Update and Delete.
+            cmdInsert.ExecuteNonQuery();
+
+            // Close connection
+            con.Close();
         }
         /// <summary>
         /// Update
