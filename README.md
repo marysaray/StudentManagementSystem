@@ -1,13 +1,15 @@
 # Student Management System
 In-Class Example of an Object Oriented Program Application 
 - Windows Form App in the .NET Framework using C#.
+- Creating a prototype application for Students to register in a system.
+- A desktop application that sends and retrieve data from a local database.
 
-CRUD Functionality
-  - Add
-  - Get
-  - Update
-  - Delete
-
+      CRUD Functionality:
+        - Add
+        - Get
+        - Update
+        - Delete
+       
 ## SQL Server Data Type Mappings 
 The following table shows the inferred:
 - .NET Framework type
