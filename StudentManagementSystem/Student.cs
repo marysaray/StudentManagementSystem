@@ -79,5 +79,13 @@ namespace StudentManagementSystem
             throw new NotImplementedException(); // method stub
         }
         #endregion
+        /// <summary>
+        /// Overrides Inheritance ToString() display method on the form.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return FullName;
+        }
     }
 }
