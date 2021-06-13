@@ -1,5 +1,6 @@
 # Student Management System
-In-Class Example of an Object Oriented Program Application.
+In-Class Example of an Object Oriented Program Application 
+- Windows Form App in the .NET Framework using C#.
 
 ## SQL Server Data Type Mappings 
 The following table shows the inferred:
