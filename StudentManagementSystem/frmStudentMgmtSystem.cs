@@ -93,14 +93,14 @@ namespace StudentManagementSystem
 
             // Ask user if the want to delete the current student.
             Student s = lstStudents.SelectedItem as Student;
-            MessageBox.Show(
-                $"Delete {s.FullName}: {s.StudentId}?",
+            DialogResult result = MessageBox.Show(
+                $"Delete {s.FullName}:{s.StudentId}?",
                 "Delete?",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
 
             // if yes: remove them from database and listbox.
-            if (DialogResult == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 StudentDB.Delete(s); // remove from database.
                 PopulateStudentList(StudentDB.GetAllStudents());
