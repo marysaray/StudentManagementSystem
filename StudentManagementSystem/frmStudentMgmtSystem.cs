@@ -85,8 +85,26 @@ namespace StudentManagementSystem
         private void cmdDeleteStudent_Click(object sender, EventArgs e)
         {
             // Ensure user has selected a student in the listbox.
-            // Ask user if the want to delete the current student
+            if (lstStudents.SelectedIndex < 0)
+            {
+                MessageBox.Show("Student needs to be selected to delete.");
+                return;
+            }
+
+            // Ask user if the want to delete the current student.
+            Student s = lstStudents.SelectedItem as Student;
+            MessageBox.Show(
+                $"Delete {s.FullName}: {s.StudentId}?",
+                "Delete?",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
             // if yes: remove them from database and listbox.
+            if (DialogResult == DialogResult.Yes)
+            {
+                StudentDB.Delete(s); // remove from database.
+                PopulateStudentList(StudentDB.GetAllStudents());
+            }
         }
     }
 }
