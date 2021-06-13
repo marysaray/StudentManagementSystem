@@ -19,7 +19,7 @@ The following table shows the inferred:
 Resource: https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql-server-data-type-mappings
 
 ## Use Type-Safe SQL Parameters
-*Security Feature:* **Avoid vulnerabilities to the software and prevent SQL injections.**
+IMPORTANT! *Security Feature:* **Avoid vulnerabilities to the software and prevent SQL injections.**
 - The Parameters collection in SQL Server provides type checking and length validation.
 - If you use the Parameters collection, input is treated as a literal value instead of as executable code.
 - An additional benefit of using the Parameters collection is that you can enforce type and length checks.
