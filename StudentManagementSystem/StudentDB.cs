@@ -49,7 +49,6 @@ namespace StudentManagementSystem
                 Student temp = new Student
                 {
                     // read each data from column name
-                    // convert for correct data type
                     StudentId = Convert.ToString(rdr["Id"]),
                     FullName = Convert.ToString(rdr["FullName"]),
                     Email = Convert.ToString(rdr["Email"]),
@@ -75,7 +74,7 @@ namespace StudentManagementSystem
             // Set up command object (query)
             SqlCommand cmdInsert = new SqlCommand();
 
-            // Statement @parameters for security against SQl Injections.
+            // Statement @parameters for security against SQL Injections.
             cmdInsert.CommandText =
                 "INSERT INTO Students(Id, FullName, Email, DOB) " +
                 "VALUES(@StudentID, @FullName, @Email, @BirthDate)";  // placeholders
@@ -104,6 +103,12 @@ namespace StudentManagementSystem
         /// <param name="s"></param>
         public static void Update(Student s)
         {
+            //Get connection
+            //Set command object(query)
+            //Open connection
+            //Execute query
+            //Condition for results
+            //Close connection
             throw new NotImplementedException();
         }
         /// <summary>
@@ -112,7 +117,31 @@ namespace StudentManagementSystem
         /// <param name="s"></param>
         public static void Delete(Student s)
         {
-            throw new NotImplementedException();
+            //Get connection
+            SqlConnection con = DBHelper.GetConnection();
+
+            // Create variable to hold query
+   
+            string query = "DELETE FROM Students " +
+                           "WHERE Id = @id";
+
+            // Set command object(query)
+            // pass variable in new instance of SqlCommand.
+            SqlCommand cmdDelete = new SqlCommand(query, con); // constructor method overload
+            cmdDelete.Parameters.AddWithValue("@id", s.StudentId);
+
+            //Open connection
+            con.Open();
+
+            //Execute query against the database
+            // !=1 throw an exception
+            int rows = cmdDelete.ExecuteNonQuery();
+            if (rows != 1)
+            {
+                throw new Exception("A student was not deleted!");
+            }
+            //Close connection
+            con.Close();
         }
     }
 }
