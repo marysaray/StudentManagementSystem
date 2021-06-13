@@ -41,9 +41,10 @@ namespace StudentManagementSystem
             //string unknownData = s2.GetDisplayText("\n");
             #endregion
 
-            // load all students from the database.
+            // Load all students from the DB method to use on the form.
             List<Student> allStudents = StudentDB.GetAllStudents();
-            // Populate them in the list box.
+
+            // Populate them in the list box to display.
             PopulateStudentList(allStudents);
         }
         #region Method To Populate Student List
