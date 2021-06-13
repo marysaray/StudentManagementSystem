@@ -54,9 +54,12 @@ namespace StudentManagementSystem
         /// <param name="students"></param>
         private void PopulateStudentList(List<Student> students)
         {
-            // loop and add all the students into the list box
+            // Clear Items.
+            lstStudents.Items.Clear();
+            // Loop and add all the students into the list box.
             foreach (Student s in students)
             {
+                // Add students to the list.
                 lstStudents.Items.Add(s);
             }
         }
