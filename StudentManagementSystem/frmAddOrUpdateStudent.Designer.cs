@@ -43,7 +43,7 @@ namespace StudentManagementSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 39);
+            this.label1.Location = new System.Drawing.Point(39, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 25);
             this.label1.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace StudentManagementSystem
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 170);
+            this.label3.Location = new System.Drawing.Point(77, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 25);
             this.label3.TabIndex = 2;
@@ -70,7 +70,7 @@ namespace StudentManagementSystem
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 242);
+            this.label4.Location = new System.Drawing.Point(7, 237);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 25);
             this.label4.TabIndex = 3;
@@ -78,37 +78,37 @@ namespace StudentManagementSystem
             // 
             // txtStudentId
             // 
-            this.txtStudentId.Location = new System.Drawing.Point(166, 39);
+            this.txtStudentId.Location = new System.Drawing.Point(175, 36);
             this.txtStudentId.Name = "txtStudentId";
             this.txtStudentId.Size = new System.Drawing.Size(401, 31);
             this.txtStudentId.TabIndex = 4;
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(166, 104);
+            this.txtFullName.Location = new System.Drawing.Point(175, 107);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(401, 31);
             this.txtFullName.TabIndex = 5;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(166, 167);
+            this.txtEmail.Location = new System.Drawing.Point(175, 167);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(401, 31);
             this.txtEmail.TabIndex = 6;
             // 
             // dtpDateOfBirth
             // 
-            this.dtpDateOfBirth.Location = new System.Drawing.Point(166, 237);
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(175, 237);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
             this.dtpDateOfBirth.Size = new System.Drawing.Size(401, 31);
             this.dtpDateOfBirth.TabIndex = 7;
             // 
             // cmdAddStudent
             // 
-            this.cmdAddStudent.Location = new System.Drawing.Point(367, 328);
+            this.cmdAddStudent.Location = new System.Drawing.Point(241, 314);
             this.cmdAddStudent.Name = "cmdAddStudent";
-            this.cmdAddStudent.Size = new System.Drawing.Size(200, 61);
+            this.cmdAddStudent.Size = new System.Drawing.Size(335, 87);
             this.cmdAddStudent.TabIndex = 8;
             this.cmdAddStudent.Text = "Add Student";
             this.cmdAddStudent.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@ namespace StudentManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 450);
+            this.ClientSize = new System.Drawing.Size(608, 430);
             this.Controls.Add(this.cmdAddStudent);
             this.Controls.Add(this.dtpDateOfBirth);
             this.Controls.Add(this.txtEmail);

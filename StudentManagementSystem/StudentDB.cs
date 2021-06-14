@@ -104,12 +104,30 @@ namespace StudentManagementSystem
         public static void Update(Student s)
         {
             //Get connection
+            SqlConnection con = DBHelper.GetConnection();
+
             //Set command object(query)
+            SqlCommand cmdUpdate = new SqlCommand();
+            cmdUpdate.Connection = con;
+            cmdUpdate.CommandText = "UPDATE Students " +
+                                    "SET FullName = @FullName, " +
+                                        "Email = @Email, " +
+                                        "DOB = @DOB " +
+                                    "WHERE Id = @stuId";
+            cmdUpdate.Parameters.AddWithValue("@FullName", s.FullName);
+            cmdUpdate.Parameters.AddWithValue("@Email", s.Email);
+            cmdUpdate.Parameters.AddWithValue("@DOB", s.DateOfBirth);
+            cmdUpdate.Parameters.AddWithValue("@stuId", s.StudentId);
+
             //Open connection
+            con.Open();
+
             //Execute query
-            //Condition for results
+            cmdUpdate.ExecuteNonQuery();
+
             //Close connection
-            throw new NotImplementedException();
+            con.Close();
+      
         }
         /// <summary>
         /// Delete

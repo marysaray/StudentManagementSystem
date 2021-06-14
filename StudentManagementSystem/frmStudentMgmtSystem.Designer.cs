@@ -46,7 +46,7 @@ namespace StudentManagementSystem
             // 
             // cmdAddStudent
             // 
-            this.cmdAddStudent.Location = new System.Drawing.Point(351, 12);
+            this.cmdAddStudent.Location = new System.Drawing.Point(323, 28);
             this.cmdAddStudent.Name = "cmdAddStudent";
             this.cmdAddStudent.Size = new System.Drawing.Size(150, 102);
             this.cmdAddStudent.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace StudentManagementSystem
             // 
             // cmdUpdateStudent
             // 
-            this.cmdUpdateStudent.Location = new System.Drawing.Point(351, 176);
+            this.cmdUpdateStudent.Location = new System.Drawing.Point(323, 177);
             this.cmdUpdateStudent.Name = "cmdUpdateStudent";
             this.cmdUpdateStudent.Size = new System.Drawing.Size(150, 98);
             this.cmdUpdateStudent.TabIndex = 2;
@@ -66,7 +66,7 @@ namespace StudentManagementSystem
             // 
             // cmdDeleteStudent
             // 
-            this.cmdDeleteStudent.Location = new System.Drawing.Point(351, 333);
+            this.cmdDeleteStudent.Location = new System.Drawing.Point(332, 328);
             this.cmdDeleteStudent.Name = "cmdDeleteStudent";
             this.cmdDeleteStudent.Size = new System.Drawing.Size(141, 96);
             this.cmdDeleteStudent.TabIndex = 3;
@@ -74,16 +74,16 @@ namespace StudentManagementSystem
             this.cmdDeleteStudent.UseVisualStyleBackColor = true;
             this.cmdDeleteStudent.Click += new System.EventHandler(this.cmdDeleteStudent_Click);
             // 
-            // Form1
+            // frmStudentMgmtSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(536, 450);
             this.Controls.Add(this.cmdDeleteStudent);
             this.Controls.Add(this.cmdUpdateStudent);
             this.Controls.Add(this.cmdAddStudent);
             this.Controls.Add(this.lstStudents);
-            this.Name = "Form1";
+            this.Name = "frmStudentMgmtSystem";
             this.Text = "Student Management System";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
