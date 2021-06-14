@@ -47,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBHelper.cs" />
-    <Compile Include="frmAddStudent.cs">
+    <Compile Include="frmAddOrUpdateStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddStudent.Designer.cs">
-      <DependentUpon>frmAddStudent.cs</DependentUpon>
+    <Compile Include="frmAddOrUpdateStudent.Designer.cs">
+      <DependentUpon>frmAddOrUpdateStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="frmStudentMgmtSystem.cs">
       <SubType>Form</SubType>
@@ -64,8 +64,8 @@
     <Compile Include="Student.cs" />
     <Compile Include="StudentDB.cs" />
     <Compile Include="Validator.cs" />
-    <EmbeddedResource Include="frmAddStudent.resx">
-      <DependentUpon>frmAddStudent.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddOrUpdateStudent.resx">
+      <DependentUpon>frmAddOrUpdateStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStudentMgmtSystem.resx">
       <DependentUpon>frmStudentMgmtSystem.cs</DependentUpon>
