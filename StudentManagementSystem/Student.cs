@@ -9,7 +9,7 @@ namespace StudentManagementSystem
     /// <summary>
     /// Represents an Individual CPTC Student.
     /// </summary>
-    class Student
+    public class Student
     {
         #region Fields
         // this is data is available for every object instance.

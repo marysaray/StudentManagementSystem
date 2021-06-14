@@ -68,7 +68,7 @@ namespace StudentManagementSystem
         private void cmdAddStudent_Click(object sender, EventArgs e)
         {
             // Create a form to add a student to the database
-            frmAddStudent addForm = new frmAddStudent();
+            frmAddOrUpdateStudent addForm = new frmAddOrUpdateStudent();
             addForm.ShowDialog();
             // After student is added place them into the list box
             List<Student> allStudents = StudentDB.GetAllStudents();
@@ -78,8 +78,19 @@ namespace StudentManagementSystem
         private void cmdUpdateStudent_Click(object sender, EventArgs e)
         {
             // Ensure user has selected a student in the listbox.
-            // Open a form with the students data populated.
-            // Once student is updated refresh listbox.
+            if (lstStudents.SelectedIndex < 0)
+            {
+                MessageBox.Show("Student needs to be selected to delete.");
+                return;
+            }
+
+            // Open form with that students data populated
+            Student selStu = lstStudents.SelectedItem as Student;
+            frmAddOrUpdateStudent updateFrm = new frmAddOrUpdateStudent(selStu);
+            updateFrm.ShowDialog();
+
+            // once student is updated, refresh listbox
+            PopulateStudentList(StudentDB.GetAllStudents());
         }
 
         private void cmdDeleteStudent_Click(object sender, EventArgs e)
