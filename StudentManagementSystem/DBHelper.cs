@@ -13,7 +13,7 @@ namespace StudentManagementSystem
         {
             // create connection
             SqlConnection con =
-                    new SqlConnection("Data Source =localhost;Initial Catalog=SMS;Integrated Security=True;");
+                    new SqlConnection("Data Source =(localdb)\\MSSQLLocalDB;Initial Catalog=SMS;Integrated Security=True;");
 
             return con;
         }
