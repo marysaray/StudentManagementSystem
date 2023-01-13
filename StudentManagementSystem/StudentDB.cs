@@ -22,11 +22,11 @@ namespace StudentManagementSystem
             SqlCommand cmd = new SqlCommand();
 
             // Query Statement
-            cmd.CommandText = "SELECT Id " +
-                              ",FullName " +
-                              ",Email " +
-                              ",DOB " +
-                              "FROM Students ";
+            cmd.CommandText = "SELECT StudentId " +
+                              ",FName " +
+                              ",LName " +
+                              ",DateOfBirth " +
+                              "FROM Student ";
 
             // connect to DB
             cmd.Connection = con;
@@ -49,10 +49,10 @@ namespace StudentManagementSystem
                 Student temp = new Student
                 {
                     // read each data from column name
-                    StudentId = Convert.ToString(rdr["Id"]),
-                    FullName = Convert.ToString(rdr["FullName"]),
-                    Email = Convert.ToString(rdr["Email"]),
-                    DateOfBirth = Convert.ToDateTime(rdr["DOB"])
+                    StudentId = Convert.ToString(rdr["StudentId"]),
+                    FullName = Convert.ToString(rdr["FName"]),
+                    Email = Convert.ToString(rdr["LName"]),
+                    DateOfBirth = Convert.ToDateTime(rdr["DateOfBirth"])
                 };
                 // add to List of Students object
                 studentList.Add(temp);
